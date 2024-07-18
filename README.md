@@ -1,44 +1,56 @@
-# tezda_task
+# Tezda Assessment
 
-## Flutter E-commerce App with Riverpod, Mockito, and HTTPS
+This Flutter project is developed for a fintech application and focuses on authentication functionality using modern Flutter packages and APIs.
 
-This Flutter project is a simple E-commerce app that allows users to browse a list of products fetched from a mock API, view product details, register an account, log in securely, mark products as favorites, and manage their profile.
-Features
+## Overview
 
-    Authentication Page:
-        Authentication with fakestore Authentication with caching
+The project utilizes Flutter for building a cross-platform mobile application. It includes features for user registration, login, and fetching current user details. Below are the key components of the project:
 
-    Product Listing Screen:
-        Displays a list of products fetched from -[API URL](https://dummyjson.com/products) using the HTTP protocol.
-        Each product includes its name, price, and an image.
-        Implements a navigation mechanism for users to tap on a product to view its details.
-        The app is designed to be responsive and works seamlessly on both iOS and Android devices.
+- **Authentication**: Includes functionalities for user registration (`Register`), user login (`Login`), and fetching current user information (`User`).
+- **State Management**: Implemented using Riverpod for efficient and scalable state management in Flutter applications.
+- **API Communication**: Utilizes the `http` package for making HTTP requests to interact with backend APIs.
+- **Logging**: Integrates the `logger` package for logging errors and other messages during API interactions.
+- **Dependency Management**: Managed using Flutter's built-in package management system and `pubspec.yaml`.
 
-Product Detail Screen:
-        Shows additional information about the selected product, including description, specifications, and user reviews.
+## APIs Used
 
- Favorites Feature:
-        Enhances the product listing screen by adding a "Favorites" feature.
-        Users can mark products as favorites by tapping on a heart icon.
+The application interacts with the following backend APIs:
 
-Technologies Used
-    Flutter:
-        Framework for building natively compiled applications for mobile, web, and desktop from a single codebase.
-    Riverpod:
-        State management library for Flutter that helps organize and manage the app's state in a scalable and testable way.
-    HTTPS:
-        The app communicates with the https://dummyjson.com/products API over HTTPS for fetching product data.
+- **Registration API**: Used to register new users. Endpoint: `ApiEndpoints.register`.
+- **Login API**: Used for user authentication and login. Endpoint: `ApiEndpoints.login`.
+- **Current User API**: Retrieves details of the currently logged-in user. Endpoint: `ApiEndpoints.currentuser`.
 
-Project Structure
+## Tools and Dependencies
 
-The project is organized into different directories:
-Note:this architecture used is a riverpod feature based folder structure 
-    lib: Contains the main Dart code for the Flutter app.
-        providers: Houses Riverpod providers for state management.
-        data: contains the api calls and repository
-        models: Defines data models for products, user profiles, etc.
-        widgets: Contains reusable widgets such as ProductCard, FavoriteButton, etc.
-    test: Holds unit and widget tests using Mockito for mocking
+### Development Tools
 
-# Tezda-Assessment
-# Tezda-Assessment
+- **Flutter SDK**: Provides the development framework for building Android and iOS applications using a single codebase.
+- **Dart SDK**: The programming language used for developing Flutter applications.
+
+### Flutter Packages
+
+- **provider**: A state management solution that uses concepts similar to Flutter's `InheritedWidget`, but with improvements for scalability and maintainability.
+- **shared_preferences**: For persisting simple data (like access tokens) between app launches.
+- **google_fonts**: Provides a collection of fonts that can be easily used in Flutter apps.
+- **http**: A package for making HTTP requests and handling responses.
+- **logger**: For logging messages, errors, and debugging information in the application.
+- **flutter_dotenv**: Allows loading environment variables from a `.env` file into Dart's `const` variables during development.
+
+### Dev Dependencies
+
+- **flutter_test**: Flutter's testing framework for writing and running unit tests for Flutter applications.
+- **flutter_lints**: A set of recommended lint rules for Dart and Flutter projects.
+
+## Installation and Usage
+
+To get started with the project:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your_username/tezda_assesment.git
+   cd tezda_assesment/
+   flutter pub get
+   flutter run
+
+This README provides a comprehensive overview of the APIs used, development tools, Flutter packages, and instructions for installation and usage of your Flutter project. Adjust the URLs, descriptions, and instructions based on your specific project details as needed.
+
