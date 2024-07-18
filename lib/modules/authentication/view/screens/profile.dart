@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tezda_assesment/core/routes/app_pages.dart';
 import 'package:tezda_assesment/modules/authentication/viewmodel/auth_viewmodel.dart';
 
 class ProfileScreen extends ConsumerWidget {
@@ -12,7 +14,6 @@ class ProfileScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final authViewModel = ref.watch(authViewModelProvider);
 
-    // Assuming you have a user object in your AuthViewModel
     final user = authViewModel.user;
 
     return SafeArea(
@@ -41,14 +42,14 @@ class ProfileScreen extends ConsumerWidget {
             ),
             ListTile(
               title: Text(
-                user?.name ?? '', // Replace with actual user data
+                user?.name ?? '',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                   fontWeight: FontWeight.bold,
                 ),
               ),
               subtitle: Text(
-                user?.email ?? '', // Replace with actual user data
+                user?.email ?? '',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(),
               ),
@@ -95,6 +96,28 @@ class ProfileScreen extends ConsumerWidget {
                       user?.email ?? '',
                       style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    child: Divider(
+                      color: Colors.grey.shade300,
+                      thickness: 1,
+                    ),
+                  ),
+                  ListTile(
+                    contentPadding: const EdgeInsets.only(left: 20, right: 20),
+                    title: InkWell(
+                      onTap: () async {
+                        final prefs = await SharedPreferences.getInstance();
+                        await prefs.clear();
+                        Navigator.pushNamed(context, login);
+                      },
+                      child: Text(
+                        'Sign out',
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
