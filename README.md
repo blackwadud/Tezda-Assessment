@@ -29,7 +29,7 @@ The application interacts with the following backend APIs:
 
 ### Flutter Packages
 
-- **provider**: A state management solution that uses concepts similar to Flutter's `InheritedWidget`, but with improvements for scalability and maintainability.
+- **Riverpod**: A state management solution that uses concepts similar to Flutter's `InheritedWidget`, but with improvements for scalability and maintainability.
 - **shared_preferences**: For persisting simple data (like access tokens) between app launches.
 - **google_fonts**: Provides a collection of fonts that can be easily used in Flutter apps.
 - **http**: A package for making HTTP requests and handling responses.
