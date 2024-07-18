@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tezda_assesment/modules/home/model/products.dart';
+import 'package:tezda_assesment/modules/home/data/model/products.dart';
 import 'package:tezda_assesment/modules/home/provider/favourite_provider.dart';
 import 'package:tezda_assesment/modules/home/view/screens/product_details_screen.dart';
 

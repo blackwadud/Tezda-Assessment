@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tezda_assesment/modules/home/model/products.dart';
+import 'package:tezda_assesment/modules/home/data/model/products.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   final Product product;

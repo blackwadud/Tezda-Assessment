@@ -1,7 +1,7 @@
 // favorite_products_provider.dart
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tezda_assesment/modules/home/model/products.dart';
-import 'package:tezda_assesment/modules/home/repository/favorite_repository.dart';
+import 'package:tezda_assesment/modules/home/data/model/products.dart';
+import 'package:tezda_assesment/modules/home/data/repository/favorite_repository.dart';
 
 // Create the repository instance
 final favoriteProductsRepositoryProvider =

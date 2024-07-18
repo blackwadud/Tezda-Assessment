@@ -1,4 +1,4 @@
-import 'package:tezda_assesment/modules/home/model/products.dart';
+import 'package:tezda_assesment/modules/home/data/model/products.dart';
 
 class FavoriteProductsRepository {
   final Set<Product> _favoriteProducts = {};
